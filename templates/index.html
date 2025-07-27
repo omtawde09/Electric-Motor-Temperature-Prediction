@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motor Temperature Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 40px; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: #333; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #555; }
+        input[type="text"] { width: 95%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        .btn { display: block; width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .result { margin-top: 20px; padding: 15px; background-color: #e2e3e5; border-radius: 4px; text-align: center; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Electric Motor Temperature Prediction</h2>
+    <form action="/predict" method="post">
+        <!-- The form will have input fields for all 10 features -->
+        <div class="form-group"><label>Ambient Temperature (°C)</label><input type="text" name="ambient" required></div>
+        <div class="form-group"><label>Coolant Temperature (°C)</label><input type="text" name="coolant" required></div>
+        <div class="form-group"><label>Voltage d-component (u_d)</label><input type="text" name="u_d" required></div>
+        <div class="form-group"><label>Voltage q-component (u_q)</label><input type="text" name="u_q" required></div>
+        <div class="form-group"><label>Motor Speed (rpm)</label><input type="text" name="motor_speed" required></div>
+        <div class="form-group"><label>Current d-component (i_d)</label><input type="text" name="i_d" required></div>
+        <div class="form-group"><label>Current q-component (i_q)</label><input type="text" name="i_q" required></div>
+        <div class="form-group"><label>Stator Yoke Temperature (°C)</label><input type="text" name="stator_yoke" required></div>
+        <div class="form-group"><label>Stator Tooth Temperature (°C)</label><input type="text" name="stator_tooth" required></div>
+        <div class="form-group"><label>Stator Winding Temperature (°C)</label><input type="text" name="stator_winding" required></div>
+
+        <button type="submit" class="btn">Predict Temperature</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
