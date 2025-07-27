@@ -24,4 +24,12 @@ A web application was built using the Flask framework to serve the trained Rando
 3. Run the Flask application: `python app.py`
 4. Open your web browser and go to `http://127.0.0.1:5000`.
 
+## Model File Notice
+
+The full trained model (`model.pkl`) is too large for GitHub (9.2GB).  
+You can download it via this external link:  
+[Download model.pkl (Google Drive)]([https://drive.google.com/file/d/1E7QE4DnfLTgDdPzRamQoTqvqIyuChIU9/view?usp=sharing})
+
+Alternatively, a small demonstration model trained on a subset of the data is available in this repository for reviewers to test the application workflow.
+
 ---
