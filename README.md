@@ -26,7 +26,7 @@ A web application was built using the Flask framework to serve the trained Rando
 
 ## Important Notice: Model File
 
-The trained model file (`model.pkl`) is 9.2GB and too large to be uploaded to GitHub.
+The trained model file (`model.pkl`) is 9.02GB and too large to be uploaded to GitHub.
 
 **You can download the required `model.pkl` file from this link:**
 [Download the model from Google Drive](https://drive.google.com/file/d/1E7QE4DnfLTgDdPzRamQoTqvqIyuChIU9/view?usp=sharing)
